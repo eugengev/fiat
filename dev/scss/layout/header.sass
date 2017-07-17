@@ -1,0 +1,89 @@
+.header 
+  position: relative
+  border-top: #4b4b4b solid 5px
+  background: #f4f4f4
+  &__logo
+    padding: 12px 21px 13px 21px
+    max-width: 254px
+  &__lang
+    padding: 38px 0 0 50px
+    a
+      color: #4a4a4a
+      font-size: 14px
+      width: 52px
+      height: 32px
+      display: inline-block
+      border-radius: 4px
+      line-height: 32px
+      text-align: center
+      margin-right: 6px
+      text-decoration: none
+      &.active, &:hover
+        text-decoration: none
+        background-color: rgb(234, 234, 234)
+        box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.16)
+  &__order-call
+    padding-right: 17px
+    padding-top: 28px
+    padding-left: 0
+    max-width: 220px
+    text-align: right
+  &__tel
+    width: 245px
+    max-width: 245px
+    text-align: right
+    padding-top: 40px
+    a
+      color: #4d4d4d
+      font-size: 16px
+      display: inline-block
+      line-height: 20px
+      height: 20px
+      text-decoration: none
+      &:before
+        content: ''
+        @include sprite($phone-h)
+        display: inline-block
+        float: left
+        margin-right: 14px
+  &__but
+    height: 54px
+    background: #ca0a13
+  &__menu
+    display: block
+    padding-top: 17px
+    padding-left: 9px
+    li
+      float: left
+      list-style: none
+      padding: 0 51px 0 0
+      margin: 0
+      position: relative
+      &:after
+        content: ''
+        width: 4px
+        height: 4px
+        border: rgba(254, 254, 254, 0.549) solid 1px
+        border-radius: 50%
+        display: inline-block
+        position: absolute
+        right: 23px
+        top: 10px
+      a
+        color: #ffffff
+        font-size: 14px
+        line-height: 15px
+        text-transform: uppercase
+        text-decoration: none
+        display: inline-block
+        position: relative
+      &.active
+        a:after, a:hover
+          content: ''
+          position: absolute
+          display: block
+          height: 1px
+          left: 0
+          right: 0
+          bottom: -8px
+          background: #ffffff

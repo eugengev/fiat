@@ -1,0 +1,60 @@
+.footer
+  background: #393939
+  h4
+    color: #ffffff
+    font-size: 18px
+    font-weight: 600
+    text-transform: uppercase
+    padding-top: 30px
+  &__copyright
+    height: 40px
+    background: #ca0a13
+    color: #fff
+    font-weight: 600
+    font-size: 13px
+    line-height: 40px
+    text-align: center
+  &__contact
+    max-width: 455px
+    font-size: 14px
+    color: #ffffff
+    line-height: 20px
+    font-weight: 600
+  &__adress
+    padding-left: 25px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      display: inline-block
+      @include sprite($locate-icon)
+  &__phone
+    padding-left: 25px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      display: inline-block
+      @include sprite($phone-icon-f)
+.soc
+  padding: 0 0 25px
+  max-width: 270px
+  &__link
+    display: inline-block
+    margin-right: 10px
+  &__vk
+    display: inline-block
+    @include sprite($vk-icon)
+  &__fb
+    display: inline-block
+    @include sprite($fb-icon)
+  &__yt
+    display: inline-block
+    @include sprite($yt-icon)
+  &__in
+    display: inline-block
+    @include sprite($in-icon)
