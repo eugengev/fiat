@@ -2,11 +2,29 @@
   position: relative
   border-top: #4b4b4b solid 5px
   background: #f4f4f4
+  .navbar-toggler
+    border: #fff solid 1px
   &__logo
     padding: 12px 21px 13px 21px
-    max-width: 254px
+    @media (min-width: 1024px)
+        max-width: 254px
+    @media (min-width: 768px)
+      max-width: 200px
+    @media (max-width: 640px)
+      padding: 10px
   &__lang
     padding: 38px 0 0 50px
+    @media (min-width: 640px) and  (max-width: 768px)
+      padding-top: 25px
+      padding-left: 10px
+      max-width: 150px
+    @media (max-width: 640px)
+      padding-top: 30px
+      padding-left: 0
+      padding-right: 0
+    @media (max-width: 340px)
+      padding-top: 20px
+      padding-left: 10px
     a
       color: #4a4a4a
       font-size: 14px
@@ -28,11 +46,30 @@
     padding-left: 0
     max-width: 220px
     text-align: right
+    @media (max-width: 768px)
+      padding-top: 20px
+    @media (max-width: 640px)
+      padding-top: 0
+    @media (max-width: 340px)
+      max-width: 100%
+      padding-left: 0
+      padding-right: 0
+      text-align: center
   &__tel
     width: 245px
     max-width: 245px
     text-align: right
     padding-top: 40px
+    @media (max-width: 768px)
+      padding-top: 35px
+    @media (max-width: 640px)
+      padding-top: 10px
+    @media (max-width: 340px)
+      max-width: 100%
+      text-align: center
+      width: auto
+      padding-bottom: 10px
+      flex: 0 0 100%
     a
       color: #4d4d4d
       font-size: 16px
@@ -49,16 +86,38 @@
   &__but
     height: 54px
     background: #ca0a13
+    @media (max-width: 640px)
+      margin-top: 10px
+  @media (max-width: 640px)
+    .navbar-collapse
+      display: none
+      &.show
+        display: block
+        position: absolute
+        left: 0
+        top: 100%
+        z-index: 100
+        .header__menu
+          z-index: 100
+          width: 90vw
   &__menu
     display: block
     padding-top: 17px
     padding-left: 9px
+    @media (max-width: 768px)
+      z-index: 100
+      background: #ca0a13
+      padding: 10px
     li
       float: left
       list-style: none
       padding: 0 51px 0 0
       margin: 0
       position: relative
+      @media (max-width: 1024px)
+        padding-right: 20px
+      @media (max-width: 768px)
+        float: none
       &:after
         content: ''
         width: 4px
@@ -69,6 +128,10 @@
         position: absolute
         right: 23px
         top: 10px
+        @media (max-width: 1024px)
+          right: 10px
+        @media (max-width: 768px)
+          display: none
       a
         color: #ffffff
         font-size: 14px
@@ -77,6 +140,8 @@
         text-decoration: none
         display: inline-block
         position: relative
+        @media (max-width: 768px)
+          margin-bottom: 10px
       &.active
         a:after, a:hover
           content: ''
@@ -87,3 +152,35 @@
           right: 0
           bottom: -8px
           background: #ffffff
+  &__search
+    float: right
+    padding-right: 7px
+    padding-top: 8px
+    font-size: 14px
+    color: #ffffff
+    @media (max-width: 640px)
+      min-width: 200px
+      label
+        display: none
+    @media (max-width: 380px)
+      min-width: 150px
+  &__submit
+    display: inline-block
+    background: none
+    border: none
+    @include sprite($lupa-icon)
+  &__text
+    padding-left: 15px
+    padding-right: 15px
+    width: 249px
+    font-style: italic
+    border: #bb091b solid 1px
+    background: #ffffff
+    height: 37px
+    margin-right: 6px
+    margin-left: 4px
+    border-radius: 18px
+    @media (max-width: 640px)
+      width: 150px
+    @media (max-width: 380px)
+      width: 100px

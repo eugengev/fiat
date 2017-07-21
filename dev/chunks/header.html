@@ -1,34 +1,46 @@
 <header block="header">
     <div class="container-fluid">
         <div class="row">
-            <div elem="logo" class="col">
+            <div elem="logo" class="col-md col-6">
                 <a href="#"><img src="./images/logotip.png" alt=""></a>
             </div>
-            <div class="col" elem="lang">
+            <div class="col col-6" elem="lang">
                 <a href="#" class="active">Укр</a>
                 <a href="#">Рус</a>
             </div>
-            <div class="col" elem="tel">
+            <div class="col-md col-6" elem="tel">
                 <a href="tel:+380432572502">+38 (0432) 57-25-02</a>
             </div>
-            <div class="col" elem="order-call">
+            <div class="col col-md" elem="order-call">
                 <a href="#" class="btn">Перезвонити Вам</a>
             </div>
         </div>
     </div>
     <div class="container-fluid" elem="but">
         <div class="row">
-            <div class="col">
-                <ul elem="menu">
-                    <li class="active"><a href="#">Головна</a></li>
-                    <li><a href="#">головна</a></li>
-                    <li><a href="#">автомобілі</a></li>
-                    <li><a href="#">сервіс</a></li>
-                    <li><a href="#">послуги</a></li>
-                    <li><a href="#">про нас</a></li>
-                </ul>
+            <div class="col col-lg-8 col-md-6">
+                <nav class="navbar-dark navbar navbar-toggleable-md bg-faded">
+                    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul elem="menu"  class="navbar-nav mr-auto">
+                            <li class="active"><a href="#">Головна</a></li>
+                            <li><a href="#">головна</a></li>
+                            <li><a href="#">автомобілі</a></li>
+                            <li><a href="#">сервіс</a></li>
+                            <li><a href="#">послуги</a></li>
+                            <li><a href="#">про нас</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
             <div class="col">
+                <div elem="search">
+                    <label for="">Пошук</label>
+                    <input type="text" name="s" placeholder="ВведІть слова.." elem="text">
+                    <input type="submit" value="" elem="submit" />
+                </div>
 
             </div>
         </div>

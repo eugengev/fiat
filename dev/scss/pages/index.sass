@@ -24,13 +24,22 @@
 
 .main-slider
   position: relative
+  @media (max-width: 640px)
+    display: none
   &__item
     position: relative
+    img
+      display: block
+      margin: 0 auto
+      @media (max-width: 640px)
+        max-width: 100%
     .container
       position: absolute
       top: 28%
       left: 50%
       transform: translate(-50%, 0)
+      @media (max-width: 1280px)
+        top: 10%
   &__title
     padding-left: 50px
     font-size: 55.65px
@@ -40,18 +49,40 @@
     font-family: Ebrima
     font-weight: bold
     padding-bottom: 34px
+    @media (max-width: 1024px)
+      font-size: 40px
+      line-height: 40px
+      padding-bottom: 15px
+    @media (max-width: 768px)
+      font-size: 30px
+      line-height: 30px
+      padding-left: 30px
   &__text
     padding-left: 55px
     font-size: 24.34px
     color: #4f4f4f
     line-height: 31.3px
     padding-bottom: 29px
+    @media (max-width: 1280px)
+      font-size: 18px
+      line-height: 20px
+      padding-bottom: 10px
+    @media (max-width: 768px)
+      font-size: 14px
+      line-height: 16px
+      padding-left: 30px
   &__link, a
     padding-left: 50px
     font-size: 24.34px
     color: #000000
     font-weight: bold
     text-decoration: none
+    @media (max-width: 1280px)
+      font-size: 18px
+    @media (max-width: 768px)
+      font-size: 14px
+      line-height: 16px
+      padding-left: 30px
     span
       display: inline-block
       margin-left: 8px
@@ -113,10 +144,15 @@
   min-height: 699px
   background: url(../images/cars-bg.jpg) repeat-y center top #fff
   padding: 73px 0 0 0
+  @media (max-width: 768px)
+    background-size: auot 100%
+  @media (max-width: 640px)
+    min-height: 100px
+    padding: 20px 0
   .slick-arrow
     position: absolute
     top: 50%
-    transform: translate(0, -78px)
+    transform: translate(0, -45px)
     z-index: 20
     background: none
     border: none
@@ -124,12 +160,22 @@
     width: 51px
     height: 51px
     outline: none
+    @media (max-width: 640px)
+      display: none
     &.slick-prev
       left: calc((100% - 1430px) / 2)
       background: url(../images/c-sl-prev.png) no-repeat
+      @media (max-width: 1280px)
+        left: 25%
+      @media (max-width: 768px)
+        left: 10%
     &.slick-next
       right: calc((100% - 1430px) / 2)
       background: url(../images/c-sl-next.png) no-repeat
+      @media (max-width: 1280px)
+        right: 25%
+      @media (max-width: 768px)
+        right: 10%
   &__title
     font-size: 30px
     font-weight: 600
@@ -140,27 +186,36 @@
   &__desc
     font-size: 14px
     color: #3d3d3d
-    height: 95px
+    height: 120px
     text-align: center
     font-weight: 600
     font-style: italic
+    @media (max-width: 640px)
+      height: auto
+      padding-bottom: 20px
   &__pic
     padding-bottom: 23px
     position: relative
     height: 268px
+    @media (max-width: 640px)
+      height: auto
     img
-      display: block
-      margin: 0 auto
-      bottom: -20px
-      transform: scale(0.7)
+      @media (min-width: 640px)
+        display: block
+        margin: 0 auto
+        bottom: -20px
+        transform: scale(0.7)
+      @media (max-width: 640px)
+        max-width: 100%
   &__item
     text-align: center
     position: relative
     &.slick-center
       .car-slider__pic
         img
-          bottom: 0
-          transform: scale(1)
+          @media (min-width: 640px)
+            bottom: 0
+            transform: scale(1)
   &__car-name
     font-weight: 600
     font-size: 18px
@@ -174,7 +229,7 @@
       color: #bb040c
   &__but
     text-align: center
-    padding-top: 19px
+    padding-top: 42px
 
 h1, h2
   color: #3d3d3d
@@ -186,15 +241,90 @@ h1, h2
 .orders-form
   background: url(../images/orders-form.jpg) no-repeat center top
   min-height: 413px
-
+  padding: 53px 0 10px 0
+  @media (max-width: 768px)
+    background-size: auto 100%
+    padding-top: 30px
+    padding-bottom: 20px
+  &__title
+    margin-bottom: 0px
+  &__desc
+    font-size: 14px
+    color: #3d3d3d
+    height: 70px
+    text-align: center
+    font-weight: 600
+    font-style: italic
+    @media (max-width: 768px)
+      height: auto
+      padding-bottom: 10px
+  &__label
+    display: inline-block
+    width: 78px
+    height: 37px
+    font-size: 14px
+    color: #414141
+    padding-left: 4px
+    @media (max-width: 768px)
+      width: 110px
+    @media (max-width: 640px)
+      width: 100%
+      display: block
+      height: auto
+  &__textarea
+    width: 330px
+    height: 102px
+    color: #414141
+    border-radius: 8px
+    border: #cbcbcb solid 1px
+    background: #ffffff
+    font-size: 14px
+    @media (max-width: 640px)
+      width: 100%
+  &__input
+    color: #414141
+    height: 37px
+    width: 230px
+    background: #ffffff
+    font-size: 14px
+    border-radius: 18px
+    border: #cbcbcb solid 1px
+    @media (max-width: 768px)
+      width: 330px
+    @media (max-width: 640px)
+      width: 100%
+  &__control
+    padding-bottom: 15px
+    @media (max-width: 640px)
+      padding-bottom: 5px
+  &__control2
+    .orders-form__label
+      width: 112px
+      vertical-align: top
+      padding: 6px 0 0 10px
+      @media (max-width: 768px)
+        width: 110px
+  input[type='submit']
+    min-width: 145px
+    width: 147px
+    display: block
+    margin: 13px auto 0
 
 .content
   padding: 38px 0 67px 0
+  @media (max-width: 768px)
+    padding: 20px 0
   img
     display: block
     max-width: none
+    @media (max-width: 1280px)
+      max-width: 100%
+    @media (max-width: 768px)
+      margin: 0 auto
   h1
     margin-bottom: 90px
+    @media (max-width: 768px)
+      margin-bottom: 20px
   &__text
     padding-left: 34px
     font-weight: 600
@@ -204,22 +334,108 @@ h1, h2
     p
       margin: 0
       padding: 0 0 15px 0
- 
+
 .news
   background: url(../images/news-bg.jpg) no-repeat center top
-  padding: 48px 0 67px 0
+  padding: 48px 0 50px 0
+  @media (max-width: 1280px)
+    background-size: auto 100%
+  @media (max-width: 768px)
+    padding: 20px 0
+  &__title
+    margin-bottom: 50px
+    @media (max-width: 768px)
+      margin-bottom: 20px
+  &__item
+    @media (max-width: 768px)
+      padding-bottom: 20px
   &__pic
     display: block
     float: left
+    @media (max-width: 640px)
+      float: none
+      padding-bottom: 20px
+      text-align: center
   &__text
     display: block
     font-size: 14px
     color: #414141
     line-height: 18px
-    margin-left: 175px
+    margin-left: 173px
+    @media (max-width: 640px)
+      margin-left: 0
   &__data
     font-weight: 600
     font-size: 13px
     color: #ca0a13
     display: block
-    line-height: 18px
+    line-height: 16px
+    padding-bottom: 7px
+  &__but
+    text-align: center
+    padding-top: 45px
+    @media (max-width: 768px)
+      padding-top: 10px
+    .btn
+      min-width: 100px
+      width: 145px
+
+#map
+  height: 412px
+  @media (max-width: 768px)
+    height: 300px
+
+.contact
+  padding: 52px 0 75px 0
+  @media (max-width: 768px)
+    padding: 20px 0
+  &__title
+    margin-bottom: 50px
+    @media (max-width: 768px)
+      margin-bottom: 15px
+  &__map
+    position: relative
+  &__adress
+    padding: 125px 0 0 95px
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    color: #ffffff
+    width: 40%
+    max-width: 470px
+    background-color: rgba(44, 40, 40, 0.8)
+    @media (max-width: 768px)
+      padding: 50px 0 0 30px
+    @media (max-width: 640px)
+      position: relative
+      left: auto
+      top: auto
+      bottom: auto
+      max-width: none
+      display: block
+      width: 100%
+      padding: 20px
+    .footer__adress
+      padding-left: 37px
+      margin-bottom: 37px
+      @media (max-width: 640px)
+        margin-bottom: 10px
+    .footer__phone
+      padding-left: 37px
+      margin-bottom: 23px
+      font-size: 14px
+      line-height: 23px
+      @media (max-width: 640px)
+        margin-bottom: 10px
+  &__email
+    padding-left: 37px
+    color: #ffffff
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      display: inline-block
+      @include sprite($email-icon)
