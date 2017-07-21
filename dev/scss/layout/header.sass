@@ -2,19 +2,26 @@
   position: relative
   border-top: #4b4b4b solid 5px
   background: #f4f4f4
+  .navbar
+    padding: 0
   .navbar-toggler
     border: #fff solid 1px
+    margin-top: 8px
+    @media (min-width: 769px)
+      display: none
   &__logo
     padding: 12px 21px 13px 21px
     @media (min-width: 1024px)
         max-width: 254px
-    @media (min-width: 768px)
+    @media (min-width: 768px) and (max-width: 1024px)
       max-width: 200px
     @media (max-width: 640px)
       padding: 10px
   &__lang
     padding: 38px 0 0 50px
-    @media (min-width: 640px) and  (max-width: 768px)
+    @media (max-width: 1024px)
+      padding-top: 30px
+    @media (min-width: 640px) and (max-width: 768px)
       padding-top: 25px
       padding-left: 10px
       max-width: 150px
@@ -50,7 +57,6 @@
       padding-top: 20px
     @media (max-width: 640px)
       padding-top: 0
-    @media (max-width: 340px)
       max-width: 100%
       padding-left: 0
       padding-right: 0
@@ -62,9 +68,12 @@
     padding-top: 40px
     @media (max-width: 768px)
       padding-top: 35px
+      max-width: 200px
     @media (max-width: 640px)
+      padding-top: 35px
+    @media (max-width: 540px)
       padding-top: 10px
-    @media (max-width: 340px)
+    @media (max-width: 400px)
       max-width: 100%
       text-align: center
       width: auto
@@ -83,12 +92,14 @@
         display: inline-block
         float: left
         margin-right: 14px
+        @media (max-width: 768px)
+          margin-right: 5px
   &__but
     height: 54px
     background: #ca0a13
     @media (max-width: 640px)
       margin-top: 10px
-  @media (max-width: 640px)
+  @media (max-width: 768px)
     .navbar-collapse
       display: none
       &.show
@@ -131,6 +142,10 @@
         @media (max-width: 1024px)
           right: 10px
         @media (max-width: 768px)
+          display: none
+      &:nth-last-child(1)
+        padding-right: 0
+        &:after
           display: none
       a
         color: #ffffff
